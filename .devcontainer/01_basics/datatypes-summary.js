@@ -23,11 +23,11 @@ let userEmail;// type undefined
 //symbol//
 const id = Symbol('123')
 const anotherId = Symbol('123')
-console.log(id === anotherId);//false - because symbol is unique
+//console.log(id === anotherId);//false - because symbol is unique
 
 const bigNumber = 3456567892345789n
 
-console.log(typeof userEmail);
+//console.log(typeof userEmail);
 
 
 
@@ -44,8 +44,36 @@ let myObj = {
 }
 
 const myFunction = function(){
-    console.log("hello world");
+    //console.log("hello world");
     
 }
 
-console.log(typeof myFunction);//return of function is called function object
+//console.log(typeof myFunction);//return of function is called function object
+
+
+
+
+
+/************ */
+// stack (primitive), heap(non-primitive)
+
+let myYtname = "ankit";
+
+let anotherName = myYtname;
+anotherName = "chaiaurcode"
+
+console.log(myYtname);
+console.log(anotherName);
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@upi.com"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "user2@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+// both get the same reference in heap
